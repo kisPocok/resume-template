@@ -45,6 +45,7 @@ The built files will be in the `dist` directory, ready for deployment to any sta
 
 ## Customizing Resume Content
 
+Edit the cover letter data in `src/data/coverLetter.ts`.
 Edit the resume data in `src/data/resume.ts` to customize:
 
 - Personal information
@@ -52,18 +53,20 @@ Edit the resume data in `src/data/resume.ts` to customize:
 - Education
 - Skills
 - Summary
+- etc.
+
+Edit the index.html and cover-letter.html files to customize the templates.
+
+## Generating PDFs
+
+```bash
+pnpm run generate-pdfs
+```
 
 ## Printing/PDF Generation
 
 The resume is optimized for printing. Use your browser's print function (Cmd+P / Ctrl+P) to generate a PDF.
 
-## Deployment
+### Disclaimer
 
-The app can be deployed to:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Any static hosting service
-
-Simply build the project and upload the `dist` folder contents.
+This project uses [Standard Resume](https://standardresume.co/)'s fonts and CSS. It is a personal project to help me create my own resume and cover letter.

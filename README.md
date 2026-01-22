@@ -1,6 +1,6 @@
-# Resume Frontend App
+# Personal CV / Resume template
 
-A beautiful, clean resume template built with React, TypeScript, and Tailwind CSS.
+A beautiful, clean resume template built with React, TypeScript, and Tailwind CSS. Can be used to create your own resume and cover letter and generate the PDFs.
 
 ## Features
 
@@ -60,7 +60,7 @@ Edit the index.html and cover-letter.html files to customize the templates.
 ## Generating PDFs
 
 ```bash
-pnpm run generate-pdfs
+pnpm run generate-pdfs [OPTIONAL-COMPANY-NAME]
 ```
 
 ## Printing/PDF Generation

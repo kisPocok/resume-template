@@ -124,6 +124,8 @@ async function main(): Promise<void> {
       throw new Error('❌ dist directory not found. Please run "npm run build" first.');
     }
 
+    const resumesDir = join(__dirname, '..', '..', 'resumes');
+
     // Start local server to serve the built files
     console.log('🌐 Starting local server...');
     const { server: httpServer, port, close } = await startServer(distPath);
@@ -144,8 +146,8 @@ async function main(): Promise<void> {
     // Create unique file names with company name
     const sanitizedCompanyName = companyName.replace(/[^a-zA-Z0-9\s-]/g, '').replace(/\s+/g, '-').toLowerCase();
     const currentYear = new Date().getFullYear();
-    const resumeOutputPath = join(__dirname, '..', '..', `your-name-resume${sanitizedCompanyName ? `-${sanitizedCompanyName}` : ''}-${currentYear}.pdf`);
-    const coverLetterOutputPath = join(__dirname, '..', '..', `your-name-cover-letter${sanitizedCompanyName ? `-${sanitizedCompanyName}` : ''}-${currentYear}.pdf`);
+    const resumeOutputPath = join(resumesDir, `your-name-resume${sanitizedCompanyName ? `-${sanitizedCompanyName}` : ''}-${currentYear}.pdf`);
+    const coverLetterOutputPath = join(resumesDir, `your-name-cover-letter${sanitizedCompanyName ? `-${sanitizedCompanyName}` : ''}-${currentYear}.pdf`);
 
     // Generate resume PDF
     await generatePDF(page, resumeUrl, resumeOutputPath);

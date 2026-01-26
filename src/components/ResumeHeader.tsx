@@ -14,7 +14,7 @@ export const ResumeHeader: React.FC<ResumeHeaderProps> = ({ personalInfo }) => {
       <div className="resume-contact">
         <span>{personalInfo.location}</span>
         <span> | </span>
-        <span><a href='tel:${personalInfo.phone}'>{personalInfo.phone}</a></span>
+        <span><a href={`tel:${personalInfo.phone}`}>{personalInfo.phone}</a></span>
         <span> | </span>
         <a href={`mailto:${personalInfo.email}`}>
           {personalInfo.email}

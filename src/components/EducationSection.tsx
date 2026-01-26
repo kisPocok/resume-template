@@ -12,7 +12,7 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ education })
       <ul className="achievement-list">
         {education.map((edu, index) => (
           <li key={index} className="achievement-item">
-            {edu.institution} {edu.degree && `— ${edu.degree}`} {edu.honors}
+            {edu.institution} {edu.degree && `— ${edu.degree}`} {edu.field && `in ${edu.field}`} {edu.honors}
             {edu.graduationDate && ` (${edu.graduationDate})`}
           </li>
         ))}
